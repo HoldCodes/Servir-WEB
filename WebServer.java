@@ -76,6 +76,7 @@ final class HttpRequest implements Runnable{
 
         // Acrescente um "." para que a solicitação de arquivo esteja dentro do diretório atual.
         fileName = "." + fileName;
+        //uma possibilidade é colocar o arquivo HTML aqui
 
         // Open the requested file.
         FileInputStream fis = null;
@@ -125,6 +126,8 @@ final class HttpRequest implements Runnable{
         //outToClient.writeBytes("Content-Type: text/html\n\n");
         //outToClient.writeBytes("<>html><body><h1>Teste.</h1><img src=\"C:\\Users\\bruno\\OneDrive\\Documentos\\BSI\\redes de computadores\\redes.jpg\"><img src=\"C:\\Users\\bruno\\OneDrive\\Documentos\\BSI\\redes de computadores\\redes2\"></body></html>\n");
         //outToClient.close();
+        
+        //teste para colocar a pag HTML para rodar
 
         outToClient.writeBytes("HTTP/1.1 200 OK\r\n");
         outToClient.writeBytes("Content-Type: text/html\r\n");
